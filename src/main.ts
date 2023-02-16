@@ -1,11 +1,14 @@
 import { NestFactory } from '@nestjs/core';
-import { UseFilters, VersioningType } from "@nestjs/common";
+import { UseFilters, VersioningType } from '@nestjs/common';
 import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
 import { AllExceptionFilter } from './http-exception.filter';
+import { run } from './connect';
+
+// run().catch(console.dir);
 
 declare const module: any;
 
