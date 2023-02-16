@@ -16,6 +16,7 @@ async function bootstrap() {
   );
   app.setGlobalPrefix('api');
   app.useGlobalFilters(new AllExceptionFilter());
+  app.enableCors();
   app.enableVersioning({
     type: VersioningType.URI,
     prefix: 'v',
